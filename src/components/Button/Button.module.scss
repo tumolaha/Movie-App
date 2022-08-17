@@ -1,0 +1,106 @@
+.wrapper {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+.normal {
+    padding: 8px 16px;
+    font-weight: 500;
+    .content {
+        font-size: 1.7rem;
+    }
+    .icon,
+    .icon-left,
+    .icon-right {
+        font-size: 2rem;
+    }
+    &:hover {
+        background-color: var(--background-button-drank-hover);
+    }
+}
+.text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--word-button-text);
+    &:hover {
+        color: var(--word-button-text-hover);
+    }
+}
+.textCenter {
+    justify-content: center;
+}
+
+.icon-left {
+    margin-right: 7px;
+}
+.icon-right {
+    margin-left: 7px;
+}
+.iconOnly {
+    font-size: 2.8rem;
+}
+.outline {
+    border: 1.5px solid;
+    border-radius: 5px;
+    border-color: var(--word-button-text);
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 8px 25px;
+    color: var(--word-button-text);
+    &:hover {
+        color: var(--word-button-text-hover);
+        border-color: var(--word-button-text-hover);
+    }
+    .icon {
+        display: flex;
+        align-items: center;
+        font-size: 2.4rem;
+    }
+}
+.highlight {
+    padding: 9.5px 26px;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    background: linear-gradient(254.81deg, #f42829 8.13%, #d96ff8 92.46%);
+    border-radius: 16px;
+    color: var(--word-button-light);
+    .icon {
+        display: flex;
+        align-items: center;
+        font-size: 2.4rem;
+    }
+}
+.radius {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+
+    border-radius: 50%;
+    color: var(--word-button-text);
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &:hover {
+        background-color: var(--background-button-drank-hover);
+        color: var(--word-button-text);
+    }
+}
+.primary {
+    padding: 9.5px 26px;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    background: var(--word-hover-green);
+    border-radius: 16px;
+    color: var(--word-button-light);
+    &:hover {
+        opacity: 0.9;
+    }
+}

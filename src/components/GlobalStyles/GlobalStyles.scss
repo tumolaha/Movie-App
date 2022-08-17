@@ -1,0 +1,50 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,700;0,900;1,300;1,600;1,700;1,900&display=swap');
+
+:root {
+    --primary: #fe2c55;
+    --word-search: #a5a3a9;
+    --word-drank: #1d1929;
+
+    --word-drank-light: #a9a9ac;
+    --word-drank-light-2: rgb(130, 131, 135);
+    --word-hover-green: rgb(108, 196, 131);
+    --background-time-bar: rgb(80, 155, 100);
+    //button
+    --word-button-text: #a5a3a9;
+    --word-button-text-hover: rgb(108, 196, 131);
+    --word-button-light: #ffffff;
+    --background-button-drank: rgba(128, 128, 128, 0.2);
+    --background-button-drank-hover: rgba(128, 128, 128, 0.1);
+    //sidebar
+    --width-sidebar: 320px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+}
+
+a {
+    text-decoration: none;
+}
+input {
+    border: none;
+    outline: none;
+}
+button {
+    background: none;
+    border: none;
+}
