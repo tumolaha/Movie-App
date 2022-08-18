@@ -32,7 +32,6 @@ function VipAccount() {
                                         sizeChildren={'1.2rem'}
                                         sizeIcon={'2.1rem'}
                                         normal
-                                        iconLeft
                                         className={cx('button-control')}
                                     >
                                         <span>Hỗ Trợ Đa Nền Tảng</span>
@@ -42,7 +41,6 @@ function VipAccount() {
                                         sizeChildren={'1.2rem'}
                                         sizeIcon={'2.1rem'}
                                         normal
-                                        iconLeft
                                         className={cx('button-control')}
                                     >
                                         <span>Blu-ray 1080P</span>
@@ -52,7 +50,6 @@ function VipAccount() {
                                         sizeChildren={'1.2rem'}
                                         sizeIcon={'2.1rem'}
                                         normal
-                                        iconLeft
                                         className={cx('button-control')}
                                     >
                                         <span>Nội Dung Độc Quyền</span>
@@ -62,7 +59,6 @@ function VipAccount() {
                                         sizeChildren={'1.2rem'}
                                         sizeIcon={'2.1rem'}
                                         normal
-                                        iconLeft
                                         className={cx('button-control')}
                                     >
                                         <span>Không Quảng Cáo</span>

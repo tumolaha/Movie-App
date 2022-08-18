@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
 import { forwardRef } from 'react';
-
 import PropTypes from 'prop-types';
 //icon
 
@@ -65,25 +64,25 @@ function Button(
     return (
         <Comp className={classes} {...props} ref={ref}>
             {icon && iconTop && (
-                <div className={cx('icon')} style={{ 'font-size': `${sizeIcon}` }}>
+                <div className={cx('icon')} style={{ fontSize: `${sizeIcon}` }}>
                     {icon}
                 </div>
             )}
             {icon && iconLeftTop && (
-                <div className={cx('icon')} style={{ 'font-size': `${sizeIcon}` }}>
+                <div className={cx('icon')} style={{ fontSize: `${sizeIcon}` }}>
                     {icon}
                 </div>
             )}
             {icon && !iconRight && !iconLeftTop && !iconTop && (
-                <div className={cx('icon-left', 'icon')} style={{ 'font-size': `${sizeIcon}` }}>
+                <div className={cx('icon-left', 'icon')} style={{ fontSize: `${sizeIcon}` }}>
                     {icon}
                 </div>
             )}
-            <div className={cx('content')} style={{ 'font-size': `${sizeChildren}` }}>
+            <div className={cx('content')} style={{ fontSize: `${sizeChildren}` }}>
                 {children}
             </div>
             {icon && iconRight && (
-                <div className={cx('icon-right', 'icon')} style={{ 'font-size': `${sizeIcon}` }}>
+                <div className={cx('icon-right', 'icon')} style={{ fontSize: `${sizeIcon}` }}>
                     {icon}
                 </div>
             )}
@@ -106,8 +105,11 @@ Button.prototype = {
     icon: PropTypes.node,
     iconTop: PropTypes.node,
 
-    background: PropTypes.string,
     size: PropTypes.string,
+    sizeChildren: PropTypes.string,
+    sizeIcon: PropTypes.string,
+
+    background: PropTypes.string,
     className: PropTypes.string,
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,

@@ -67,94 +67,92 @@ const SETTING_ITEMS = [
 function Header() {
     const [currentUser, setCurrentUser] = useState(false);
     useEffect(() => {
-        setCurrentUser(false);
+        setCurrentUser(true);
     }, []);
 
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('container')}>
-                <div className={cx('left')}>
-                    <Search />
+            <div className={cx('left')}>
+                <Search />
+            </div>
+            <div className={cx('right')}>
+                <div className={cx('history', 'item')}>
+                    <History currentUser={currentUser} />
                 </div>
-                <div className={cx('right')}>
-                    <div className={cx('history', 'item')}>
-                        <History currentUser={currentUser} />
-                    </div>
-                    <div className={cx('setting', 'item')}>
-                        <Headless
-                            interactive
-                            trigger="click"
-                            placement="bottom"
-                            render={(attrs) => (
-                                <div className="box" tabIndex="-1" {...attrs}>
-                                    <Menu items={SETTING_ITEMS} />
-                                </div>
-                            )}
-                        >
-                            <Button radius iconOnly>
-                                <BiCog />
-                            </Button>
-                        </Headless>
-                    </div>
-                    <div className={cx('account', 'item')}>
-                        <Headless
-                            interactive
-                            trigger="click"
-                            placement="bottom"
-                            render={(attrs) => (
-                                <div className="box" tabIndex="-1" {...attrs}>
-                                    {currentUser ? (
-                                        <Menu items={ACCOUNT_ITEMS} />
-                                    ) : (
-                                        <div className={cx('account-login')}>
-                                            <PopperWrapper>
-                                                <div className={cx('account-container')}>
-                                                    <div className={cx('account-title')}>
-                                                        Đăng nhập để theo dõi các nội dung mới nhất
-                                                    </div>
-                                                    <Button primary>Đăng nhập</Button>
+                <div className={cx('setting', 'item')}>
+                    <Headless
+                        interactive
+                        trigger="click"
+                        placement="bottom"
+                        render={(attrs) => (
+                            <div className="box" tabIndex="-1" {...attrs}>
+                                <Menu items={SETTING_ITEMS} />
+                            </div>
+                        )}
+                    >
+                        <Button radius iconOnly>
+                            <BiCog />
+                        </Button>
+                    </Headless>
+                </div>
+                <div className={cx('account', 'item')}>
+                    <Headless
+                        interactive
+                        trigger="click"
+                        placement="bottom"
+                        render={(attrs) => (
+                            <div className="box" tabIndex="-1" {...attrs}>
+                                {currentUser ? (
+                                    <Menu items={ACCOUNT_ITEMS} />
+                                ) : (
+                                    <div className={cx('account-login')}>
+                                        <PopperWrapper>
+                                            <div className={cx('account-container')}>
+                                                <div className={cx('account-title')}>
+                                                    Đăng nhập để theo dõi các nội dung mới nhất
                                                 </div>
-                                            </PopperWrapper>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-                        >
-                            <Button radius iconOnly>
-                                <BiUserCircle />
-                            </Button>
-                        </Headless>
-                    </div>
-                    <div className={cx('get-app', 'item')}>
-                        <Headless
-                            interactive
-                            placement="bottom"
-                            render={(attrs) => (
-                                <div className="box" tabIndex="-1" {...attrs}>
-                                    <PopperWrapper>
-                                        <div className={cx('app-container')}>
-                                            <div className={cx('app-title')}>
-                                                <p className={cx('text-highlight')}>
-                                                    Quét mã QR tải ứng dụng về điện thoại di động, nhận VIP miễn phí
-                                                </p>
-                                                <span>Chỉ dành cho khách hàng mới trên điện thoại di động nhé</span>
+                                                <Button primary>Đăng nhập</Button>
                                             </div>
-                                            <div className={cx('app-qr')}>
-                                                <Image src={Images.appQr} alt="app" />
-                                            </div>
+                                        </PopperWrapper>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    >
+                        <Button radius iconOnly>
+                            <BiUserCircle />
+                        </Button>
+                    </Headless>
+                </div>
+                <div className={cx('get-app', 'item')}>
+                    <Headless
+                        interactive
+                        placement="bottom"
+                        render={(attrs) => (
+                            <div className="box" tabIndex="-1" {...attrs}>
+                                <PopperWrapper>
+                                    <div className={cx('app-container')}>
+                                        <div className={cx('app-title')}>
+                                            <p className={cx('text-highlight')}>
+                                                Quét mã QR tải ứng dụng về điện thoại di động, nhận VIP miễn phí
+                                            </p>
+                                            <span>Chỉ dành cho khách hàng mới trên điện thoại di động nhé</span>
                                         </div>
-                                    </PopperWrapper>
-                                </div>
-                            )}
-                        >
-                            <Button outline icon={<BiDownload />}>
-                                <span> APP</span>
-                            </Button>
-                        </Headless>
-                    </div>
-                    <div className={cx('account-vip', 'item')}>
-                        <VipAccount />
-                    </div>
+                                        <div className={cx('app-qr')}>
+                                            <Image src={Images.appQr} alt="app" />
+                                        </div>
+                                    </div>
+                                </PopperWrapper>
+                            </div>
+                        )}
+                    >
+                        <Button outline icon={<BiDownload />}>
+                            <span> APP</span>
+                        </Button>
+                    </Headless>
+                </div>
+                <div className={cx('account-vip', 'item')}>
+                    <VipAccount />
                 </div>
             </div>
         </div>

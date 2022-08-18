@@ -8,7 +8,7 @@
 
     --word-drank-light: #a9a9ac;
     --word-drank-light-2: rgb(130, 131, 135);
-    --word-hover-green: rgb(108, 196, 131);
+    --word-hover-green: rgb(31, 182, 71);
     --background-time-bar: rgb(80, 155, 100);
     //button
     --word-button-text: #a5a3a9;
@@ -17,7 +17,11 @@
     --background-button-drank: rgba(128, 128, 128, 0.2);
     --background-button-drank-hover: rgba(128, 128, 128, 0.1);
     //sidebar
-    --width-sidebar: 320px;
+    --width-sidebar: 250px;
+    --width-sidebar-sub: 250px;
+    --background-sidebar: #f9f9f9;
+    --box-shadow-sidebar: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --word-background-active: rgb(108, 196, 131);
 }
 
 * {
